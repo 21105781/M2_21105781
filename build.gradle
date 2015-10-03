@@ -16,8 +16,13 @@ dependencies {
     testCompile 'junit:junit:4.+'
 }
 
-task Hello {
- doLast {
- println "Hello !"
- }
+
+task hello(description: "Affiche Hello") {
+doLast {
+ print "Hello, "
+}
+}
+
+task world(description: "Affiche world", dependsOn: hello) << {
+ println "world !"
 }
