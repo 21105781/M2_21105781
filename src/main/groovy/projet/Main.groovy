@@ -1,13 +1,9 @@
 package projet
 
 class Main {
-    static void main(def args) {
-        Main m = new Main()
-        println m.returnHello()
-    }
-
-    String returnHello() {
-        'Hello'
-    }
+ static void main(def args) {
+ println 'Hello'
+ }
 }
+
 

@@ -1,11 +1,16 @@
 
 
-task hello(description: "Affiche Hello") {
-doLast {
-
- print "Hello, "
+apply plugin: 'groovy'
+apply plugin: 'application'
+mainClassName = 'projet.Main'
+repositories {
+ mavenCentral()
 }
+
+dependencies {
+ compile 'org.codehaus.groovy:groovy-all:2.4.5'
 }
 
-task world(description: "Affiche world", dependsOn: hello) << {
-println "world !"}
+
+
+
